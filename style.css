@@ -180,12 +180,26 @@ section.redes-sociais .flex{
     
 }
 
-@media screen and (max-width: 1080px){
-    .flex{
-        flex-direction: column;
+@media screen and (max-width: 1020px){
+    /*CLASSES GERAIS*/
+.flex{
+    flex-direction: column-reverse;
     }
+    /* CABEÇALHO */
 .menu-desktop, btn-contato {
      display:none;
     }
+    
+section.topo-do-site .flex{
+    gap: 40px;
 }
+section.topo-do-site{
+    padding: 20px 8%;
     }
+.topo-do-site h1{
+    font-size: 30px;
+    }
+.topo-do-site .img-topo-site img{
+    width: 100%;
+}
+}
