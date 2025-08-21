@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Iosevka Nerd Font';
+    src: url(./fontes/IosevkaNerdFont-Medium.ttf);
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+      
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.nerd {
+    font-family: 'Iosevka Nerd Font', monospace;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.interface-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: purple;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+} 
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: purple;
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px purple;
+    transform: scale(1.05);
+}
+
+header{
+    padding: 10px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #636262;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    font-size: 20px;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 50px;
+}
+
+/*ESTILO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    font-size: 20px;
+    margin: 40px 0px;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    width: 300px;
+    animation: flutuante 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes flutuante{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/*Box*/
+
+section.redes-sociais{
+    padding: 40px 4%;
+    
+}
+
+section.redes-sociais .flex{
+    gap: 60px;
+    
+}
+
+
+.redes-sociais .redes-sociais-box{
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.redes-sociais .redes-sociais-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff6c;
+    
+}
+
+
+.redes-sociais .redes-sociais-box  i{
+    font-size: 48px;
+    color: purple;
+    
+}
+
+.redes-sociais .redes-sociais-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.redes-sociais .redes-sociais-box p{
+    font-size: 18px;
+    margin: 15px 0;
+    color: #fff;
+    
+}
+
+.redes-sociais .redes-sociais-box a{
+    font-size: 18px;
+    margin: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.menu-mobile {
+  display: none; /* por padrão, escondido */
+  position: relative;
+  z-index: 1000;
+}
+
+.menu-mobile i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white; /* deixa visível no fundo preto */
+}
+
+.menu-mobile ul {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: #111;
+  padding: 0 20px;
+  border-radius: 10px;
+  list-style: none;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+.menu-mobile ul.active {
+  max-height: 500px; /* ajuste conforme o conteúdo */
+  padding: 20px;
+}
+
+.menu-mobile i.open::before {
+  content: "\f62a"; /* exemplo: ícone de 'X' do Bootstrap Icons */
+}
+
+
+.menu-mobile ul li {
+  margin: 15px 0;
+}
+
+.menu-mobile ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.menu-mobile ul li a:hover {
+  color: purple;
+}
+
+@media screen and (max-width: 1080px){
+    /*CLASSES GERAIS*/
+.flex{
+    flex-direction: column-reverse;
+    }
+    /* CABEÇALHO */
+.menu-desktop, .btn-contato {
+     display:none;
+    }
+    
+section.topo-do-site .flex{
+    gap: 40px;
+}
+section.topo-do-site{
+    padding: 20px 8%;
+    }
+.topo-do-site h1{
+    font-size: 30px;
+    }
+.topo-do-site .img-topo-site img{
+    width: 100%;
+}
+
+  .menu-mobile {
+    display: block; /* mostra no mobile */
+  }
+}

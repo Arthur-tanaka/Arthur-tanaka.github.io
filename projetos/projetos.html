@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="projetos.css">
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="ARTHUR.png" alt="logo/arthur">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+    <section class="projetos">
+        <h1>Alguns dos meus projetos : </h1>
+        <div class="Meus-projetos-box">
+            <div class="container" id="projetos"></div>
+        </div>
+    </section>
+    </main>
+    <div class="Meus-projetos-box">  
+    <script>
+        let projetos = [
+            { nome: "Web-app, Rotina 2025", descricao: "Web-app para organização de rotinas", link: "https://github.com/Arthur-tanaka/Flask-WebApp-Project/tree/main" },
+            { nome: "Gerador de senhas", descricao: "Método facíl e rápido de gerar uma senha na qual você pode escolher a quantidade de elementos", link: "https://github.com/Arthur-tanaka/Gerador-de-senhas/blob/main/gerador_senha.py" },
+            { nome: "Portfólio Online", descricao: "Meu site pessoal para exibir meus projetos e organizar meu conhecimento", link: "https://arthur-tanaka.github.io/" },
+            { nome: "Buscar elementos pela letra inicial", descricao: "Um sistema programado em python que permite buscar os elementos de uma lista só pela primeira letra", link: "https://github.com/Arthur-tanaka/Buscar-elemento-atraves-de-letra-inicial/blob/main/inicial_elemento.py" },
+            { nome: "POO treino", descricao: "Pequeno treino que fiz sobre Programação orientada a objetos (POO)", link: "https://github.com/Arthur-tanaka/treino-POO-" },
+            { nome: "Sistema de gerenciamento de restaurantes", descricao: "Projeto da alura que fiz durante a aula, foi utilizada a linguagem python", link: "https://github.com/Arthur-tanaka/Sabor-Express-Arthur-Tanaka" },
+        ];
+
+        const container = document.getElementById("projetos");
+        projetos.forEach(projeto => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+                <h2>${projeto.nome}</h2>
+                <p>${projeto.descricao}</p>
+                <a href="${projeto.link}" target="_blank">Ver Projeto</a>
+            `;
+            container.appendChild(card);
+        });
+    </script>
+    </div>
+</body>
+</html>

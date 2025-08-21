@@ -1,0 +1,205 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+    min-height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: purple;
+}
+
+
+header{
+    padding: 10px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #636262;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+.projetos{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 4% 0 4%;
+}
+
+.projetos h1 {
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+
+a{
+    color: purple;
+    text-decoration: none;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 30px;
+    padding-bottom: 60px;
+}
+
+
+.card {
+    background-color: #111;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px white;
+}
+
+.card h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 12px;
+}
+
+.card a {
+    color: #d100d1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    header nav ul li {
+        padding: 0 20px;
+    }
+
+    .btn-contato button {
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+
+    h2.titulo {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header > .interface {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    h2.titulo {
+        font-size: 28px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .btn-contato button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    h2.titulo {
+        font-size: 24px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 20px;
+    }
+
+    .projetos {
+        padding: 20px 4% 0 4%;
+    }
+}
